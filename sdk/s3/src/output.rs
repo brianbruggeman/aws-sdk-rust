@@ -5235,6 +5235,10 @@ impl GetObjectOutput {
     pub fn body(&self) -> &aws_smithy_http::byte_stream::ByteStream {
         &self.body
     }
+    /// <p>Mutable object data for use with <a href="https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html">tokio_stream::StreamExt</a>.</p>
+    pub fn body_mut(&mut self) -> &mut aws_smithy_http::byte_stream::ByteStream {
+        &mut self.body
+    }
     /// <p>Specifies whether the object retrieved was (true) or was not (false) a Delete Marker. If false, this response header does not appear in the response.</p>
     pub fn delete_marker(&self) -> bool {
         self.delete_marker
